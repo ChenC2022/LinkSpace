@@ -1,6 +1,7 @@
 <template>
   <div class="login-container">
     <div class="glass-panel login-card fade-in">
+      <img src="/logo.svg" alt="LinkSpace" class="logo-icon-lg" />
       <h1 class="logo-text">LinkSpace</h1>
       <p class="subtitle">Personal URL Manager</p>
       
@@ -99,5 +100,13 @@ const handleLogin = async () => {
   color: var(--danger-color);
   font-size: 0.875rem;
   margin-top: 16px;
+}
+
+
+.logo-icon-lg {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 0 10px rgba(129, 140, 248, 0.3));
 }
 </style>

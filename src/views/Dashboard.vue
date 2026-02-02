@@ -3,6 +3,7 @@
     <!-- Header -->
     <header class="header glass-panel flex-item-center justify-between">
       <div class="flex-item-center gap-2">
+        <img src="/logo.svg" alt="LinkSpace" class="logo-icon" />
         <h2 class="logo-text">LinkSpace</h2>
       </div>
       <div class="flex-item-center gap-4">
@@ -395,6 +396,11 @@ const showQRCode = async (link) => {
   -webkit-text-fill-color: transparent;
   font-weight: 700;
   letter-spacing: -0.5px;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
 }
 
 .controls {

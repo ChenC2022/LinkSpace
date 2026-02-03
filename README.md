@@ -1,6 +1,8 @@
 # 🚀 LinkSpace - 个人简易短链接管理平台
 
-LinkSpace 是一个基于 Cloudflare 生态系统开发的轻量级、高性能 URL 短链接管理工具。采用现代化的“深色玻璃拟态 (Deep Space Glass)”设计风格，专为个人使用而生。
+LinkSpace 是一个基于 Cloudflare 生态系统开发的轻量级、高性能 URL 短链接管理工具。采用现代化的“新拟物风格 (Neumorphism)”设计，专为个人使用而生。
+
+![LinkSpace Dashboard](./public/LinkSpaceScreen.png)
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Cloudflare_Pages-orange.svg)
@@ -9,17 +11,17 @@ LinkSpace 是一个基于 Cloudflare 生态系统开发的轻量级、高性能 
 ## ✨ 功能亮点
 
 - **⚡ 极速重定向**：利用 Cloudflare 边缘计算（Pages Functions），实现全球范围内的毫秒级跳转。
-- **🎨 现代化 UI**：深色模式结合玻璃拟态交互，提供流畅的管理体验。
+- **🎨 现代化 UI**：新拟物风格 (Neumorphism) 交互，提供极具质感且流畅的管理体验。
 - **🛠 全能管理**：
   - **自定义短码**：支持随机生成或手动指定短链接后缀。
   - **访问统计**：实时追踪每个短链接的点击次数。
   - **二维码生成**：一键生成对应的 QR Code。
-  - **导入导出**：支持 JSON 格式数据批量备份与迁移。
+  - **导入导出**：支持 JSON 格式数据批量备份 with 迁移。
 - **🔒 安全可靠**：内置简单高效的密码验证机制，数据存储于 Cloudflare 边缘 KV 数据库。
 
 ## 🛠 技术栈
 
-- **前端**: Vue 3 (Vite), Vanilla CSS (Glassmorphism)
+- **前端**: Vue 3 (Vite), Vanilla CSS (Neumorphism)
 - **后端**: Cloudflare Pages Functions (Edge Middleware)
 - **存储**: Cloudflare Workers KV
 - **路由**: Vue Router (SPA) + Cloudflare _redirects

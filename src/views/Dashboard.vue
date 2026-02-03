@@ -439,6 +439,9 @@ const showQRCode = async (link) => {
   cursor: pointer;
   user-select: none;
   transition: color 0.2s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
 }
 
 .sortable:hover {
@@ -446,8 +449,10 @@ const showQRCode = async (link) => {
 }
 
 .sort-icon {
-  font-size: 0.7em;
-  margin-left: 4px;
+  font-size: 0.8em;
+  margin-left: 6px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .truncate {

@@ -440,8 +440,6 @@ const showQRCode = async (link) => {
   user-select: none;
   transition: color 0.2s;
   white-space: nowrap;
-  display: flex;
-  align-items: center;
 }
 
 .sortable:hover {

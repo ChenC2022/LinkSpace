@@ -68,7 +68,7 @@ const handleLogin = async () => {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: radial-gradient(circle at top right, rgba(129, 140, 248, 0.15), transparent 40%);
+  background: var(--bg-color);
 }
 
 .login-card {
@@ -81,9 +81,7 @@ const handleLogin = async () => {
 .logo-text {
   font-size: 2rem;
   font-weight: 700;
-  background: linear-gradient(to right, #818cf8, #c084fc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--primary-color);
   margin-bottom: 8px;
 }
 
@@ -107,6 +105,7 @@ const handleLogin = async () => {
   width: 64px;
   height: 64px;
   margin-bottom: 16px;
-  filter: drop-shadow(0 0 10px rgba(129, 140, 248, 0.3));
+  /* Neumorphic icon style */
+  filter: drop-shadow(5px 5px 10px var(--shadow-dark)) drop-shadow(-5px -5px 10px var(--shadow-light));
 }
 </style>

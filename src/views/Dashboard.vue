@@ -391,9 +391,7 @@ const showQRCode = async (link) => {
 }
 
 .logo-text {
-  background: linear-gradient(to right, #818cf8, #c084fc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--primary-color);
   font-weight: 700;
   letter-spacing: -0.5px;
 }
@@ -401,6 +399,7 @@ const showQRCode = async (link) => {
 .logo-icon {
   width: 32px;
   height: 32px;
+  filter: drop-shadow(3px 3px 6px var(--shadow-dark));
 }
 
 .controls {
@@ -425,12 +424,13 @@ const showQRCode = async (link) => {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary-color);
+  text-shadow: 2px 2px 4px var(--shadow-dark), -2px -2px 4px var(--shadow-light);
 }
 
 .divider {
   width: 1px;
   height: 24px;
-  background: var(--glass-border);
+  background: #d1d9e6;
   margin: 0 8px;
 }
 
@@ -459,7 +459,7 @@ const showQRCode = async (link) => {
 
 .short-link-text {
   color: var(--primary-color);
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   transition: all 0.2s;
 }
@@ -470,10 +470,13 @@ const showQRCode = async (link) => {
 }
 
 .badge {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 4px 8px;
+  color: var(--text-muted);
+  padding: 4px 12px;
   border-radius: 12px;
   font-size: 0.8em;
+  font-weight: 600;
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+              inset -3px -3px 6px var(--shadow-light);
 }
 
 .row-actions {
@@ -483,24 +486,30 @@ const showQRCode = async (link) => {
 }
 
 .action-btn {
-  background: transparent;
+  background: var(--bg-color);
   border: none;
   cursor: pointer;
-  padding: 6px;
-  border-radius: 6px;
-  transition: background 0.2s;
-  filter: grayscale(100%);
-  opacity: 0.7;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s;
+  color: var(--text-muted);
+  box-shadow: 5px 5px 10px var(--shadow-dark), 
+              -5px -5px 10px var(--shadow-light);
 }
 
 .action-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  filter: grayscale(0);
-  opacity: 1;
+  color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+.action-btn:active {
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+              inset -3px -3px 6px var(--shadow-light);
+  transform: translateY(1px);
 }
 
 .action-btn.danger:hover {
-  background: rgba(248, 113, 113, 0.2);
+  color: var(--danger-color);
 }
 
 /* Modal */
@@ -510,7 +519,7 @@ const showQRCode = async (link) => {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(224, 229, 236, 0.6); /* Light backdrop */
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
@@ -522,13 +531,16 @@ const showQRCode = async (link) => {
   width: 90%;
   max-width: 500px;
   padding: 32px;
-  background: #1e1b4b; /* Solid backing for better readability */
-  background: linear-gradient(135deg, rgba(30, 27, 75, 0.95), rgba(15, 23, 42, 0.95));
+  background: var(--bg-color);
+  border-radius: var(--radius-lg);
+  box-shadow: 20px 20px 60px #bec3c9, 
+              -20px -20px 60px #ffffff;
 }
 
 .modal-card h3 {
   margin-bottom: 24px;
   font-size: 1.25rem;
+  color: var(--text-main);
 }
 
 .modal-form .form-group {
@@ -540,6 +552,7 @@ const showQRCode = async (link) => {
   margin-bottom: 8px;
   font-size: 0.9rem;
   color: var(--text-muted);
+  font-weight: 500;
 }
 
 .hint {
@@ -558,7 +571,9 @@ const showQRCode = async (link) => {
 
 .qr-canvas img {
   border-radius: 8px;
-  border: 4px solid white;
+  border: 4px solid var(--bg-color);
+  box-shadow: 5px 5px 10px var(--shadow-dark), 
+              -5px -5px 10px var(--shadow-light);
 }
 .center-content {
   text-align: center;
@@ -571,5 +586,6 @@ const showQRCode = async (link) => {
   font-size: 0.9rem;
   color: var(--primary-color);
   word-break: break-all;
+  font-weight: 600;
 }
 </style>
